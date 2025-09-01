@@ -40,7 +40,7 @@ const Projects = () => {
       icon: Server,
       color: "green",
       links: {
-        demo: "https://hx91l48j2m.apidog.io/",
+        demo: "https://pfk4h0lowy.apidog.io",
         github: "https://github.com/script-beast/CinemaCrateBackend",
       },
     },
