@@ -1,65 +1,56 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { 
-  Code2, 
-  Database, 
-  Server, 
-  Cloud, 
-  Wrench,
-  Cpu,
-  Globe,
-  GitBranch
-} from 'lucide-react';
-import { Card } from '@/components/ui/card';
+import { motion } from "framer-motion";
+import { Code2, Database, Server, Cloud, Wrench, Globe } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Languages',
+      title: "Languages",
       icon: Code2,
-      color: 'blue',
-      skills: ['C++', 'Java', 'JavaScript', 'TypeScript', 'Python']
+      color: "blue",
+      skills: ["C++", "Java", "JavaScript", "TypeScript", "Python"],
     },
     {
-      title: 'Frontend',
+      title: "Frontend",
       icon: Globe,
-      color: 'purple',
-      skills: ['ReactJS', 'Next.js', 'Tailwind CSS', 'HTML5', 'CSS3']
+      color: "purple",
+      skills: ["ReactJS", "Next.js", "Tailwind CSS", "HTML5", "CSS3"],
     },
     {
-      title: 'Backend',
+      title: "Backend",
       icon: Server,
-      color: 'green',
-      skills: ['NodeJS', 'NestJS', 'Express', 'REST APIs', 'GraphQL']
+      color: "green",
+      skills: ["NodeJS", "NestJS", "Express", "REST APIs", "GraphQL"],
     },
     {
-      title: 'Databases',
+      title: "Databases",
       icon: Database,
-      color: 'orange',
-      skills: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'Supabase']
+      color: "orange",
+      skills: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Supabase"],
     },
     {
-      title: 'DevOps/Cloud',
+      title: "DevOps/Cloud",
       icon: Cloud,
-      color: 'cyan',
-      skills: ['AWS', 'Docker', 'CI/CD', 'DigitalOcean', 'Vercel']
+      color: "cyan",
+      skills: ["AWS", "Docker", "CI/CD", "DigitalOcean", "Vercel"],
     },
     {
-      title: 'Tools',
+      title: "Tools",
       icon: Wrench,
-      color: 'pink',
-      skills: ['Git', 'VS Code', 'Postman', 'Figma', 'Linux']
-    }
+      color: "pink",
+      skills: ["Git", "VS Code", "Postman", "Figma", "Linux"],
+    },
   ];
 
   const colorClasses = {
-    blue: 'border-blue-500/20 bg-blue-500/10 text-blue-400',
-    purple: 'border-purple-500/20 bg-purple-500/10 text-purple-400',
-    green: 'border-green-500/20 bg-green-500/10 text-green-400',
-    orange: 'border-orange-500/20 bg-orange-500/10 text-orange-400',
-    cyan: 'border-cyan-500/20 bg-cyan-500/10 text-cyan-400',
-    pink: 'border-pink-500/20 bg-pink-500/10 text-pink-400',
+    blue: "border-blue-500/20 bg-blue-500/10 text-blue-400",
+    purple: "border-purple-500/20 bg-purple-500/10 text-purple-400",
+    green: "border-green-500/20 bg-green-500/10 text-green-400",
+    orange: "border-orange-500/20 bg-orange-500/10 text-orange-400",
+    cyan: "border-cyan-500/20 bg-cyan-500/10 text-cyan-400",
+    pink: "border-pink-500/20 bg-pink-500/10 text-pink-400",
   };
 
   return (
@@ -92,10 +83,16 @@ const Skills = () => {
             >
               <Card className="bg-gray-800/60 border-gray-700 p-4 sm:p-6 h-full backdrop-blur-sm hover:bg-gray-800/80 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <div className={`p-3 rounded-lg ${colorClasses[category.color as keyof typeof colorClasses]} mr-4`}>
+                  <div
+                    className={`p-3 rounded-lg ${
+                      colorClasses[category.color as keyof typeof colorClasses]
+                    } mr-4`}
+                  >
                     <category.icon size={24} />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-white">{category.title}</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">
+                    {category.title}
+                  </h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { Send, Github, Linkedin, Mail, Code2, MapPin } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -15,12 +16,24 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!
+      );
+    } catch (error) {
+      console.error("Error sending email:", error);
+    } finally {
+      setFormData({ name: "", email: "", message: "" });
+    }
   };
 
   const handleChange = (
@@ -70,7 +83,7 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Let's <span className="gradient-text">Connect</span>
+            Let&lsquo;s <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto px-4">
             Ready to collaborate on your next project or discuss opportunities
@@ -190,10 +203,10 @@ const Contact = () => {
                 Open to Opportunities
               </h4>
               <p className="text-gray-300 text-sm leading-relaxed">
-                I'm always interested in hearing about new opportunities,
+                I&apos;m always interested in hearing about new opportunities,
                 especially those involving cutting-edge technologies, AI
-                integration, or challenging full-stack projects. Let's build
-                something amazing together!
+                integration, or challenging full-stack projects. Let&apos;s
+                build something amazing together!
               </p>
             </Card>
           </motion.div>

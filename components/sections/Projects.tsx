@@ -5,11 +5,15 @@ import {
   ExternalLink,
   Github,
   Sparkles,
-  CreditCard,
-  UtensilsCrossed,
+  Server,
+  AppWindowIcon,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import StudySyncPic from "@/assets/study-sync.png";
+import cinemaCratePic from "@/assets/cinema-crate.png";
+import windowPayloadPic from "@/assets/window-payload.png";
 
 const Projects = () => {
   const projects = [
@@ -17,8 +21,7 @@ const Projects = () => {
       title: "Study Sync",
       description:
         "AI-powered flashcard & quiz generator built with MERN + TypeScript. Features file upload (PDF/DOCX/TXT), quiz tracking, flashcard export, and integrated Groq SDK + OpenAI for intelligent content generation.",
-      image:
-        "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: StudySyncPic,
       tech: ["React", "TypeScript", "Node.js", "MongoDB", "OpenAI", "Groq SDK"],
       icon: Sparkles,
       color: "blue",
@@ -32,10 +35,9 @@ const Projects = () => {
       title: "Cinema Crate API",
       description:
         "Built a scalable backend using Node.js, Express, TypeScript, and MongoDB, integrating Stripe for secure payments, ApiDog for comprehensive API testing, and additional libraries for email services and data validation, ensuring a reliable, efficient, and production-ready system for real-world applications.",
-      image:
-        "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: cinemaCratePic,
       tech: ["Node.js", "Express", "MongoDB", "JWT", "Stripe", "TypeScript"],
-      icon: CreditCard,
+      icon: Server,
       color: "green",
       links: {
         demo: "https://hx91l48j2m.apidog.io/",
@@ -46,10 +48,9 @@ const Projects = () => {
       title: "Windows Payload Project",
       description:
         "Created a Python client-server system demonstrating remote command execution concepts, focusing on networking, request handling, and secure communication between systems for educational and research purposes.",
-      image:
-        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: windowPayloadPic,
       tech: ["Python", "Socket Programming", "Networking"],
-      icon: UtensilsCrossed,
+      icon: AppWindowIcon,
       color: "orange",
       links: {
         // demo: "https://foodorder-demo.vercel.app",
@@ -94,10 +95,12 @@ const Projects = () => {
               className="group"
             >
               <Card className="bg-gray-800/60 border-gray-700 overflow-hidden backdrop-blur-sm hover:bg-gray-800/80 transition-all duration-300 h-full">
-                {/* <div className="relative overflow-hidden">
-                  <img
+                <div className="relative overflow-hidden">
+                  <Image
                     src={project.image}
                     alt={project.title}
+                    width={400}
+                    height={200}
                     className="w-full h-40 sm:h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div
@@ -108,7 +111,7 @@ const Projects = () => {
                   <div className="absolute top-4 left-4">
                     <project.icon className="text-white" size={20} />
                   </div>
-                </div> */}
+                </div>
 
                 <div className="p-4 sm:p-6">
                   <h3 className="text-lg sm:text-xl font-bold text-white mb-3">

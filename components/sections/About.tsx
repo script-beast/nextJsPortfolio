@@ -82,17 +82,18 @@ const About = () => {
 
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
               With experience at innovative companies like Work Companion and
-              Greenusys Technologies, I've contributed to projects that have
-              improved business efficiency by up to 40%. I'm particularly
-              passionate about integrating AI technologies and modern DevOps
-              practices into web applications.
+              Greenusys Technologies, I&apos;ve contributed to projects that
+              have improved business efficiency by up to 40%. I&apos;m
+              particularly passionate about integrating AI technologies and
+              modern DevOps practices into web applications.
             </p>
 
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-              When I'm not coding, you'll find me exploring the latest in AI
-              development, contributing to open-source projects, or solving
-              algorithmic challenges on LeetCode. I believe in continuous
-              learning and staying at the forefront of technology trends.
+              When I&apos;m not coding, you&apos;ll find me exploring the latest
+              in AI development, contributing to open-source projects, or
+              solving algorithmic challenges on LeetCode. I believe in
+              continuous learning and staying at the forefront of technology
+              trends.
             </p>
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-6">

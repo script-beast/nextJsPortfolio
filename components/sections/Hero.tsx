@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { ArrowDown, Download, Eye, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { motion } from "framer-motion";
+import { ArrowDown, Download, Eye, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -36,8 +36,9 @@ const Hero = () => {
               Full Stack Developer | MERN + TypeScript | AI Enthusiast
             </h2>
             <p className="text-base sm:text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
-              I build scalable web applications and AI-powered tools, specializing in MERN stack, 
-              TypeScript, and cloud deployment. Passionate about creating solutions that make a difference.
+              I build scalable web applications and AI-powered tools,
+              specializing in MERN stack, TypeScript, and cloud deployment.
+              Passionate about creating solutions that make a difference.
             </p>
           </motion.div>
 
@@ -47,13 +48,19 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 px-4"
           >
-            <Button
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 w-full sm:w-auto"
+            <a
+              href="https://drive.google.com/file/d/1RPl2q2H_7Q29lzslFfl5DuJUlwFLG3iQ/view"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Download className="mr-2" size={20} />
-              View Resume
-            </Button>
+              <Button
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 w-full sm:w-auto"
+              >
+                <Download className="mr-2" size={20} />
+                View Resume
+              </Button>
+            </a>
             <Button
               size="lg"
               variant="outline"
