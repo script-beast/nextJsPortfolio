@@ -7,6 +7,7 @@ import {
   Sparkles,
   Server,
   AppWindowIcon,
+  Brain,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -14,9 +15,24 @@ import Image from "next/image";
 import StudySyncPic from "@/assets/study-sync.png";
 import cinemaCratePic from "@/assets/cinema-crate.png";
 import windowPayloadPic from "@/assets/window-payload.png";
+import aivoraPic from "@/assets/aivora.png";
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Aivora",
+      description:
+        "Aivora is an AI-powered goal planner that generates roadmaps, analyzes progress, provides insights, and exports visual reports. Built with Next.js, Tailwind, and LangChain, it features a polished dual-theme UI with smooth animations and modern SaaS design.",
+      image: aivoraPic,
+      tech: ["Langchain", "Next.js", "TypeScript", "Node.js", "MongoDB"],
+      icon: Brain,
+      color: "orange",
+      links: {
+        demo: "https://myaivora.vercel.app/",
+        frontend: "https://github.com/script-beast/aivora-frontend",
+        backend: "https://github.com/script-beast/aivora-backend",
+      },
+    },
     {
       title: "Study Sync",
       description:
@@ -51,11 +67,8 @@ const Projects = () => {
       image: windowPayloadPic,
       tech: ["Python", "Socket Programming", "Networking"],
       icon: AppWindowIcon,
-      color: "orange",
-      links: {
-        // demo: "https://foodorder-demo.vercel.app",
-        github: "https://github.com/script-beast/py_windows_payload",
-      },
+      color: "pink",
+      links: { github: "https://github.com/script-beast/py_windows_payload" },
     },
   ];
 
@@ -63,6 +76,7 @@ const Projects = () => {
     blue: "from-blue-500/20 to-blue-600/20 border-blue-500/30",
     green: "from-green-500/20 to-green-600/20 border-green-500/30",
     orange: "from-orange-500/20 to-orange-600/20 border-orange-500/30",
+    pink: "from-pink-500/20 to-pink-600/20 border-pink-500/30",
   };
 
   return (
