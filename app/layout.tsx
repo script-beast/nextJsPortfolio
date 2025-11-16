@@ -1,15 +1,18 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Ankit Prajapati | Full Stack Developer',
-  description: 'Full Stack Developer specializing in MERN stack, TypeScript, and AI-powered applications. Computer Science graduate with experience in scalable web development.',
-  keywords: 'Full Stack Developer, MERN Stack, TypeScript, React, Node.js, AI, Web Development',
-  authors: [{ name: 'Ankit Prajapati' }],
-  viewport: 'width=device-width, initial-scale=1',
+  title: "Ankit Prajapati | Full Stack Developer",
+  description:
+    "Full Stack Developer specializing in MERN stack, TypeScript, and AI-powered applications. Computer Science graduate with experience in scalable web development.",
+  keywords:
+    "Full Stack Developer, MERN Stack, TypeScript, React, Node.js, AI, Web Development",
+  authors: [{ name: "Ankit Prajapati" }],
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
@@ -19,8 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-gray-900 text-gray-100 antialiased`}>
+      <body
+        className={`${inter.className} bg-gray-900 text-gray-100 antialiased`}
+      >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
